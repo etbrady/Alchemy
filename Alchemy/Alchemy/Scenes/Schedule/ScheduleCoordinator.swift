@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import RxSwift
 
 class ScheduleCoordinator: NSObject, NavigationCoordinating {
     
@@ -19,7 +20,8 @@ class ScheduleCoordinator: NSObject, NavigationCoordinating {
     }
     
     private func createViewModel(for viewController: ScheduleViewController) -> ScheduleViewModel {
-        let viewModel = ScheduleViewModel()
+        let date = Observable<Date>.just(Date())
+        let viewModel = ScheduleViewModel(date: date)
         return viewModel
     }
 }
