@@ -13,6 +13,15 @@
 		EADFA5AE20CDCBE300FDFE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EADFA5AD20CDCBE300FDFE1C /* Assets.xcassets */; };
 		EADFA5B120CDCBE300FDFE1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADFA5AF20CDCBE300FDFE1C /* LaunchScreen.storyboard */; };
 		EADFA5BC20CDCBE300FDFE1C /* AlchemyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA5BB20CDCBE300FDFE1C /* AlchemyTests.swift */; };
+		EADFA5C820CDD09100FDFE1C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADFA5C720CDD09100FDFE1C /* Alamofire.framework */; };
+		EADFA5CA20CDD09D00FDFE1C /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADFA5C920CDD09D00FDFE1C /* ObjectMapper.framework */; };
+		EADFA5CC20CDD0A200FDFE1C /* Presentr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADFA5CB20CDD0A200FDFE1C /* Presentr.framework */; };
+		EADFA5CE20CDD0A500FDFE1C /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADFA5CD20CDD0A500FDFE1C /* RxAlamofire.framework */; };
+		EADFA5D020CDD0A800FDFE1C /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADFA5CF20CDD0A800FDFE1C /* RxBlocking.framework */; };
+		EADFA5D220CDD0AB00FDFE1C /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADFA5D120CDD0AB00FDFE1C /* RxCocoa.framework */; };
+		EADFA5D420CDD0B100FDFE1C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADFA5D320CDD0B100FDFE1C /* RxSwift.framework */; };
+		EADFA5D620CDD0B500FDFE1C /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADFA5D520CDD0B500FDFE1C /* RxTest.framework */; };
+		EADFA5D820CDD0B800FDFE1C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADFA5D720CDD0B800FDFE1C /* SnapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +45,15 @@
 		EADFA5B720CDCBE300FDFE1C /* AlchemyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlchemyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EADFA5BB20CDCBE300FDFE1C /* AlchemyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlchemyTests.swift; sourceTree = "<group>"; };
 		EADFA5BD20CDCBE300FDFE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EADFA5C720CDD09100FDFE1C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		EADFA5C920CDD09D00FDFE1C /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		EADFA5CB20CDD0A200FDFE1C /* Presentr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Presentr.framework; path = Carthage/Build/iOS/Presentr.framework; sourceTree = "<group>"; };
+		EADFA5CD20CDD0A500FDFE1C /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
+		EADFA5CF20CDD0A800FDFE1C /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		EADFA5D120CDD0AB00FDFE1C /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		EADFA5D320CDD0B100FDFE1C /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		EADFA5D520CDD0B500FDFE1C /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		EADFA5D720CDD0B800FDFE1C /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +61,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EADFA5C820CDD09100FDFE1C /* Alamofire.framework in Frameworks */,
+				EADFA5CA20CDD09D00FDFE1C /* ObjectMapper.framework in Frameworks */,
+				EADFA5CC20CDD0A200FDFE1C /* Presentr.framework in Frameworks */,
+				EADFA5CE20CDD0A500FDFE1C /* RxAlamofire.framework in Frameworks */,
+				EADFA5D020CDD0A800FDFE1C /* RxBlocking.framework in Frameworks */,
+				EADFA5D220CDD0AB00FDFE1C /* RxCocoa.framework in Frameworks */,
+				EADFA5D420CDD0B100FDFE1C /* RxSwift.framework in Frameworks */,
+				EADFA5D620CDD0B500FDFE1C /* RxTest.framework in Frameworks */,
+				EADFA5D820CDD0B800FDFE1C /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +89,7 @@
 				EADFA5A520CDCBE100FDFE1C /* Alchemy */,
 				EADFA5BA20CDCBE300FDFE1C /* AlchemyTests */,
 				EADFA5A420CDCBE100FDFE1C /* Products */,
+				EADFA5C620CDD09100FDFE1C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +124,22 @@
 			path = AlchemyTests;
 			sourceTree = "<group>";
 		};
+		EADFA5C620CDD09100FDFE1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EADFA5D720CDD0B800FDFE1C /* SnapKit.framework */,
+				EADFA5D520CDD0B500FDFE1C /* RxTest.framework */,
+				EADFA5D320CDD0B100FDFE1C /* RxSwift.framework */,
+				EADFA5D120CDD0AB00FDFE1C /* RxCocoa.framework */,
+				EADFA5CF20CDD0A800FDFE1C /* RxBlocking.framework */,
+				EADFA5CD20CDD0A500FDFE1C /* RxAlamofire.framework */,
+				EADFA5CB20CDD0A200FDFE1C /* Presentr.framework */,
+				EADFA5C920CDD09D00FDFE1C /* ObjectMapper.framework */,
+				EADFA5C720CDD09100FDFE1C /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +150,7 @@
 				EADFA59F20CDCBE100FDFE1C /* Sources */,
 				EADFA5A020CDCBE100FDFE1C /* Frameworks */,
 				EADFA5A120CDCBE100FDFE1C /* Resources */,
+				EADFA5D920CDD0E800FDFE1C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -191,6 +236,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EADFA5D920CDD0E800FDFE1C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Presentr.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxAlamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EADFA59F20CDCBE100FDFE1C /* Sources */ = {
@@ -360,6 +430,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62F58FRFFV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Alchemy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,6 +452,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62F58FRFFV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Alchemy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,0 +1,6 @@
+github "Alamofire/Alamofire" ~> 4.7
+github "RxSwiftCommunity/RxAlamofire" ~> 4.2
+github "SnapKit/SnapKit" ~> 4.0.0
+github "ReactiveX/RxSwift" ~> 4.0
+github "Hearst-DD/ObjectMapper" ~> 3.2
+github "IcaliaLabs/Presentr" ~> 1.3
