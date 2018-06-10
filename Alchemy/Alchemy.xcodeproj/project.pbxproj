@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EADFA5A720CDCBE100FDFE1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA5A620CDCBE100FDFE1C /* AppDelegate.swift */; };
-		EADFA5A920CDCBE100FDFE1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA5A820CDCBE100FDFE1C /* ViewController.swift */; };
-		EADFA5AC20CDCBE100FDFE1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADFA5AA20CDCBE100FDFE1C /* Main.storyboard */; };
 		EADFA5AE20CDCBE300FDFE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EADFA5AD20CDCBE300FDFE1C /* Assets.xcassets */; };
 		EADFA5B120CDCBE300FDFE1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADFA5AF20CDCBE300FDFE1C /* LaunchScreen.storyboard */; };
 		EADFA5BC20CDCBE300FDFE1C /* AlchemyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA5BB20CDCBE300FDFE1C /* AlchemyTests.swift */; };
@@ -20,8 +18,12 @@
 		EADFA5D020CDD0A800FDFE1C /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADFA5CF20CDD0A800FDFE1C /* RxBlocking.framework */; };
 		EADFA5D220CDD0AB00FDFE1C /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADFA5D120CDD0AB00FDFE1C /* RxCocoa.framework */; };
 		EADFA5D420CDD0B100FDFE1C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADFA5D320CDD0B100FDFE1C /* RxSwift.framework */; };
-		EADFA5D620CDD0B500FDFE1C /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADFA5D520CDD0B500FDFE1C /* RxTest.framework */; };
 		EADFA5D820CDD0B800FDFE1C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADFA5D720CDD0B800FDFE1C /* SnapKit.framework */; };
+		EADFA5DD20CDD35100FDFE1C /* Coordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA5DC20CDD35100FDFE1C /* Coordinating.swift */; };
+		EADFA5DF20CDD36F00FDFE1C /* NavigationCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA5DE20CDD36F00FDFE1C /* NavigationCoordinating.swift */; };
+		EADFA5E320CDD43B00FDFE1C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA5E220CDD43B00FDFE1C /* ScheduleViewController.swift */; };
+		EADFA5E520CDD44400FDFE1C /* ScheduleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA5E420CDD44400FDFE1C /* ScheduleCoordinator.swift */; };
+		EADFA5E720CDD46100FDFE1C /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA5E620CDD46100FDFE1C /* ScheduleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +39,6 @@
 /* Begin PBXFileReference section */
 		EADFA5A320CDCBE100FDFE1C /* Alchemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alchemy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EADFA5A620CDCBE100FDFE1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EADFA5A820CDCBE100FDFE1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EADFA5AB20CDCBE100FDFE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EADFA5AD20CDCBE300FDFE1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EADFA5B020CDCBE300FDFE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EADFA5B220CDCBE300FDFE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +54,11 @@
 		EADFA5D320CDD0B100FDFE1C /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		EADFA5D520CDD0B500FDFE1C /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		EADFA5D720CDD0B800FDFE1C /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		EADFA5DC20CDD35100FDFE1C /* Coordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinating.swift; sourceTree = "<group>"; };
+		EADFA5DE20CDD36F00FDFE1C /* NavigationCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinating.swift; sourceTree = "<group>"; };
+		EADFA5E220CDD43B00FDFE1C /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		EADFA5E420CDD44400FDFE1C /* ScheduleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCoordinator.swift; sourceTree = "<group>"; };
+		EADFA5E620CDD46100FDFE1C /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +73,6 @@
 				EADFA5D020CDD0A800FDFE1C /* RxBlocking.framework in Frameworks */,
 				EADFA5D220CDD0AB00FDFE1C /* RxCocoa.framework in Frameworks */,
 				EADFA5D420CDD0B100FDFE1C /* RxSwift.framework in Frameworks */,
-				EADFA5D620CDD0B500FDFE1C /* RxTest.framework in Frameworks */,
 				EADFA5D820CDD0B800FDFE1C /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,9 +109,9 @@
 		EADFA5A520CDCBE100FDFE1C /* Alchemy */ = {
 			isa = PBXGroup;
 			children = (
+				EADFA5E020CDD41800FDFE1C /* Scenes */,
+				EADFA5DA20CDD31D00FDFE1C /* Base */,
 				EADFA5A620CDCBE100FDFE1C /* AppDelegate.swift */,
-				EADFA5A820CDCBE100FDFE1C /* ViewController.swift */,
-				EADFA5AA20CDCBE100FDFE1C /* Main.storyboard */,
 				EADFA5AD20CDCBE300FDFE1C /* Assets.xcassets */,
 				EADFA5AF20CDCBE300FDFE1C /* LaunchScreen.storyboard */,
 				EADFA5B220CDCBE300FDFE1C /* Info.plist */,
@@ -138,6 +142,41 @@
 				EADFA5C720CDD09100FDFE1C /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EADFA5DA20CDD31D00FDFE1C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EADFA5DB20CDD33900FDFE1C /* Coordinating */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EADFA5DB20CDD33900FDFE1C /* Coordinating */ = {
+			isa = PBXGroup;
+			children = (
+				EADFA5DC20CDD35100FDFE1C /* Coordinating.swift */,
+				EADFA5DE20CDD36F00FDFE1C /* NavigationCoordinating.swift */,
+			);
+			path = Coordinating;
+			sourceTree = "<group>";
+		};
+		EADFA5E020CDD41800FDFE1C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				EADFA5E120CDD42C00FDFE1C /* Schedule */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		EADFA5E120CDD42C00FDFE1C /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				EADFA5E220CDD43B00FDFE1C /* ScheduleViewController.swift */,
+				EADFA5E420CDD44400FDFE1C /* ScheduleCoordinator.swift */,
+				EADFA5E620CDD46100FDFE1C /* ScheduleViewModel.swift */,
+			);
+			path = Schedule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,7 +263,6 @@
 			files = (
 				EADFA5B120CDCBE300FDFE1C /* LaunchScreen.storyboard in Resources */,
 				EADFA5AE20CDCBE300FDFE1C /* Assets.xcassets in Resources */,
-				EADFA5AC20CDCBE100FDFE1C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EADFA5A920CDCBE100FDFE1C /* ViewController.swift in Sources */,
+				EADFA5E320CDD43B00FDFE1C /* ScheduleViewController.swift in Sources */,
+				EADFA5E520CDD44400FDFE1C /* ScheduleCoordinator.swift in Sources */,
+				EADFA5DF20CDD36F00FDFE1C /* NavigationCoordinating.swift in Sources */,
+				EADFA5E720CDD46100FDFE1C /* ScheduleViewModel.swift in Sources */,
+				EADFA5DD20CDD35100FDFE1C /* Coordinating.swift in Sources */,
 				EADFA5A720CDCBE100FDFE1C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,14 +333,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EADFA5AA20CDCBE100FDFE1C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EADFA5AB20CDCBE100FDFE1C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EADFA5AF20CDCBE300FDFE1C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
