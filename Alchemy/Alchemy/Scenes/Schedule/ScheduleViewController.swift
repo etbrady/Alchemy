@@ -3,6 +3,7 @@ import UIKit
 import SnapKit
 import RxSwift
 import RxCocoa
+import Presentr
 
 class ScheduleViewController: UIViewController {
     
@@ -15,29 +16,38 @@ class ScheduleViewController: UIViewController {
         tableView.estimatedRowHeight = 150
         tableView.tableFooterView = UIView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.allowsMultipleSelection = true
-        tableView.allowsSelection = true
         
         tableView.register(EventTableViewCell.self, forCellReuseIdentifier: EventTableViewCell.reuseIdentifier)
         
         return tableView
     }()
     
+    let dateBarButtonItem: UIBarButtonItem = {
+        let dateBarButtonItem = UIBarButtonItem(title: "Date", style: .plain, target: nil, action: nil)
+        dateBarButtonItem.tintColor = .white
+        return dateBarButtonItem
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = "Schedule"
-        navigationController?.navigationBar.prefersLargeTitles = true
         
         setupViews()
         setupBindings()
     }
     
     private func setupViews() {
+        title = "Schedule"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.barTintColor = UIColor.alchemyBlue
+
+        navigationItem.leftBarButtonItem = dateBarButtonItem
+        
         view.addSubview(tableView)
         tableView.snp.makeConstraints({ make in
             make.edges.equalTo(self.view)
         })
+        
     }
     
     private func setupBindings() {
@@ -46,6 +56,17 @@ class ScheduleViewController: UIViewController {
             .bind(to: tableView.rx.items(cellIdentifier: EventTableViewCell.reuseIdentifier, cellType: EventTableViewCell.self)) { index, scent, cell in
                 cell.configure(with: scent)
             }.disposed(by: disposeBag)
+        
+        viewModel?
+            .date
+            .map { date -> String in
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MMM d"
+                
+                return dateFormatter.string(from: date)
+            }
+            .bind(to: dateBarButtonItem.rx.title)
+            .disposed(by: disposeBag)
     }
     
 }

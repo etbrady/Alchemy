@@ -7,21 +7,28 @@ class ScheduleCoordinator: NSObject, NavigationCoordinating {
     let root: UINavigationController
     var viewController: ScheduleViewController?
     
+    let datePickerCoordinator: DatePickerCoordinator
+    let dateSubject = BehaviorSubject<Date>(value: Date())
+    
+    let disposeBag = DisposeBag()
+    
     init(root: UINavigationController) {
         self.root = root
+        datePickerCoordinator = DatePickerCoordinator(root: root, dateSubject: dateSubject)
     }
     
     func createViewController() -> ScheduleViewController {
         let viewController = ScheduleViewController()
-        let viewModel = createViewModel(for: viewController)
+        let viewModel = ScheduleViewModel(date: dateSubject.asObservable())
         
         viewController.viewModel = viewModel
         return viewController
     }
     
-    private func createViewModel(for viewController: ScheduleViewController) -> ScheduleViewModel {
-        let date = Observable<Date>.just(Date())
-        let viewModel = ScheduleViewModel(date: date)
-        return viewModel
+    func configure(_ viewController: ScheduleViewController) {
+        viewController.dateBarButtonItem.rx.tap.subscribe({ _ in
+            self.datePickerCoordinator.start()
+        }).disposed(by: disposeBag)
     }
+    
 }
