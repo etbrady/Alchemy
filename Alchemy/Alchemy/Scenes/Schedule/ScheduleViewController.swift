@@ -52,7 +52,7 @@ class ScheduleViewController: UIViewController {
     
     private func setupBindings() {
         viewModel?
-            .events
+            .filteredEvents
             .bind(to: tableView.rx.items(cellIdentifier: EventTableViewCell.reuseIdentifier, cellType: EventTableViewCell.self)) { index, scent, cell in
                 cell.configure(with: scent)
             }.disposed(by: disposeBag)

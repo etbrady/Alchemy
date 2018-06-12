@@ -6,12 +6,16 @@ struct ScheduleViewModel {
     let disposeBag = DisposeBag()
     
     let events: Observable<[Event]>
+    let location: Observable<Location?>
     let date: Observable<Date>
+    
+    let filteredEvents: Observable<[Event]>
     
     let scheduleNetworker = ScheduleNetworker()
     
     init(date: Observable<Date>) {
         self.date = date
+        self.location = Observable<Location?>.just(nil)
         
         events = scheduleNetworker
             .fetchSchedule(for: date)
@@ -29,7 +33,17 @@ struct ScheduleViewModel {
                     print(error.localizedDescription)
                     return []
                 }
-            }.asObservable()
+            }
+            .asObservable()
+        
+        filteredEvents = Observable.combineLatest(events, location) { events, location in
+            return events.filter { event in
+                guard let location = location else {
+                    return true
+                }
+                return event.location == location
+            }
+        }
     }
     
 }
