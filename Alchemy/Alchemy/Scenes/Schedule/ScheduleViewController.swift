@@ -22,6 +22,12 @@ class ScheduleViewController: UIViewController {
         return tableView
     }()
     
+    let locationBarButtonItem: UIBarButtonItem = {
+        let dateBarButtonItem = UIBarButtonItem(title: "All Locations", style: .plain, target: nil, action: nil)
+        dateBarButtonItem.tintColor = .white
+        return dateBarButtonItem
+    }()
+    
     let dateBarButtonItem: UIBarButtonItem = {
         let dateBarButtonItem = UIBarButtonItem(title: "Date", style: .plain, target: nil, action: nil)
         dateBarButtonItem.tintColor = .white
@@ -41,7 +47,8 @@ class ScheduleViewController: UIViewController {
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.barTintColor = UIColor.alchemyBlue
 
-        navigationItem.leftBarButtonItem = dateBarButtonItem
+        navigationItem.leftBarButtonItem = locationBarButtonItem
+        navigationItem.rightBarButtonItem = dateBarButtonItem
         
         view.addSubview(tableView)
         tableView.snp.makeConstraints({ make in
@@ -66,6 +73,14 @@ class ScheduleViewController: UIViewController {
                 return dateFormatter.string(from: date)
             }
             .bind(to: dateBarButtonItem.rx.title)
+            .disposed(by: disposeBag)
+        
+        viewModel?
+            .location
+            .map { location -> String in
+                return location?.rawValue ?? "All Locations"
+            }
+            .bind(to: locationBarButtonItem.rx.title)
             .disposed(by: disposeBag)
     }
     

@@ -13,9 +13,9 @@ struct ScheduleViewModel {
     
     let scheduleNetworker = ScheduleNetworker()
     
-    init(date: Observable<Date>) {
+    init(date: Observable<Date>, location: Observable<Location?>) {
         self.date = date
-        self.location = Observable<Location?>.just(nil)
+        self.location = location
         
         events = scheduleNetworker
             .fetchSchedule(for: date)

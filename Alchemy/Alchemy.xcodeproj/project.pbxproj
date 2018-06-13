@@ -32,6 +32,9 @@
 		EADFA5F820CDEF8700FDFE1C /* DatePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA5F720CDEF8700FDFE1C /* DatePickerCoordinator.swift */; };
 		EADFA5FA20CDEFAD00FDFE1C /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA5F920CDEFAD00FDFE1C /* DatePickerViewController.swift */; };
 		EADFA5FC20CDF03C00FDFE1C /* PresentrCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA5FB20CDF03C00FDFE1C /* PresentrCoordinating.swift */; };
+		EADFA60320CF9DA000FDFE1C /* LocationPickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA60220CF9DA000FDFE1C /* LocationPickerCoordinator.swift */; };
+		EADFA60520CF9DAD00FDFE1C /* LocationPIckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA60420CF9DAD00FDFE1C /* LocationPIckerViewController.swift */; };
+		EADFA60720CFA63000FDFE1C /* LocationPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA60620CFA63000FDFE1C /* LocationPickerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		EADFA5F720CDEF8700FDFE1C /* DatePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCoordinator.swift; sourceTree = "<group>"; };
 		EADFA5F920CDEFAD00FDFE1C /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		EADFA5FB20CDF03C00FDFE1C /* PresentrCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentrCoordinating.swift; sourceTree = "<group>"; };
+		EADFA60220CF9DA000FDFE1C /* LocationPickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerCoordinator.swift; sourceTree = "<group>"; };
+		EADFA60420CF9DAD00FDFE1C /* LocationPIckerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPIckerViewController.swift; sourceTree = "<group>"; };
+		EADFA60620CFA63000FDFE1C /* LocationPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +190,7 @@
 		EADFA5E020CDD41800FDFE1C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EADFA60120CF9D5900FDFE1C /* LocationPicker */,
 				EADFA5F620CDEEB800FDFE1C /* DatePicker */,
 				EADFA5E120CDD42C00FDFE1C /* Schedule */,
 			);
@@ -225,6 +232,16 @@
 				EADFA5F920CDEFAD00FDFE1C /* DatePickerViewController.swift */,
 			);
 			path = DatePicker;
+			sourceTree = "<group>";
+		};
+		EADFA60120CF9D5900FDFE1C /* LocationPicker */ = {
+			isa = PBXGroup;
+			children = (
+				EADFA60220CF9DA000FDFE1C /* LocationPickerCoordinator.swift */,
+				EADFA60420CF9DAD00FDFE1C /* LocationPIckerViewController.swift */,
+				EADFA60620CFA63000FDFE1C /* LocationPickerViewModel.swift */,
+			);
+			path = LocationPicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,13 +377,16 @@
 				EADFA5DF20CDD36F00FDFE1C /* NavigationCoordinating.swift in Sources */,
 				EADFA5FC20CDF03C00FDFE1C /* PresentrCoordinating.swift in Sources */,
 				EADFA5E720CDD46100FDFE1C /* ScheduleViewModel.swift in Sources */,
+				EADFA60320CF9DA000FDFE1C /* LocationPickerCoordinator.swift in Sources */,
 				EADFA5F520CDDD4400FDFE1C /* Configurable.swift in Sources */,
 				EADFA5F120CDDC9200FDFE1C /* UIColorExtension.swift in Sources */,
+				EADFA60720CFA63000FDFE1C /* LocationPickerViewModel.swift in Sources */,
 				EADFA5DD20CDD35100FDFE1C /* Coordinating.swift in Sources */,
 				EADFA5EA20CDD6F300FDFE1C /* Event.swift in Sources */,
 				EADFA5F320CDDD1900FDFE1C /* EventTableViewCell.swift in Sources */,
 				EADFA5F820CDEF8700FDFE1C /* DatePickerCoordinator.swift in Sources */,
 				EADFA5A720CDCBE100FDFE1C /* AppDelegate.swift in Sources */,
+				EADFA60520CF9DAD00FDFE1C /* LocationPIckerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
