@@ -22,10 +22,12 @@ class TabBarCoordinator: NSObject, Coordinating {
         let scheduleTabBarItem = UITabBarItem(title: "Schedule", image: #imageLiteral(resourceName: "Calendar"), tag: 0)
         scheduleCoordinator.viewController?.tabBarItem = scheduleTabBarItem
         
-        let scheduleCoordinator2 = ScheduleCoordinator(root: UINavigationController())
-        scheduleCoordinator2.start()
+        let workoutCoordinator = WorkoutCoordinator(root: UINavigationController())
+        workoutCoordinator.start()
+        let workoutTabBarItem = UITabBarItem(title: "Workout", image: #imageLiteral(resourceName: "Pushups"), tag: 0)
+        workoutCoordinator.viewController?.tabBarItem = workoutTabBarItem
         
-        viewController.setViewControllers([scheduleCoordinator.root], animated: false)
+        viewController.setViewControllers([scheduleCoordinator.root, workoutCoordinator.root], animated: false)
     }
 
 }
