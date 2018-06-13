@@ -16,6 +16,8 @@
 		EA8D867420D0D45600771268 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8D867220D0D45600771268 /* RxDataSources.framework */; };
 		EA8D867620D0DC9A00771268 /* WorkoutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D867520D0DC9A00771268 /* WorkoutCoordinator.swift */; };
 		EA8D867A20D0DE3600771268 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D867920D0DE3600771268 /* ExerciseTableViewCell.swift */; };
+		EA8D867C20D0E73F00771268 /* WorkoutNetworker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D867B20D0E73F00771268 /* WorkoutNetworker.swift */; };
+		EA8D867E20D0EF2500771268 /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8D867D20D0EF2400771268 /* SwiftSoup.framework */; };
 		EADFA5A720CDCBE100FDFE1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA5A620CDCBE100FDFE1C /* AppDelegate.swift */; };
 		EADFA5AE20CDCBE300FDFE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EADFA5AD20CDCBE300FDFE1C /* Assets.xcassets */; };
 		EADFA5B120CDCBE300FDFE1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADFA5AF20CDCBE300FDFE1C /* LaunchScreen.storyboard */; };
@@ -66,6 +68,8 @@
 		EA8D867220D0D45600771268 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		EA8D867520D0DC9A00771268 /* WorkoutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCoordinator.swift; sourceTree = "<group>"; };
 		EA8D867920D0DE3600771268 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		EA8D867B20D0E73F00771268 /* WorkoutNetworker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutNetworker.swift; sourceTree = "<group>"; };
+		EA8D867D20D0EF2400771268 /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/iOS/SwiftSoup.framework; sourceTree = "<group>"; };
 		EADFA5A320CDCBE100FDFE1C /* Alchemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alchemy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EADFA5A620CDCBE100FDFE1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EADFA5AD20CDCBE300FDFE1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 				EADFA5D820CDD0B800FDFE1C /* SnapKit.framework in Frameworks */,
 				EA8D867320D0D45600771268 /* Differentiator.framework in Frameworks */,
 				EA8D867420D0D45600771268 /* RxDataSources.framework in Frameworks */,
+				EA8D867E20D0EF2500771268 /* SwiftSoup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +150,7 @@
 				EA8D866F20D0CEE000771268 /* WorkoutViewController.swift */,
 				EA8D867520D0DC9A00771268 /* WorkoutCoordinator.swift */,
 				EA8D867920D0DE3600771268 /* ExerciseTableViewCell.swift */,
+				EA8D867B20D0E73F00771268 /* WorkoutNetworker.swift */,
 			);
 			path = Workout;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 		EADFA5C620CDD09100FDFE1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA8D867D20D0EF2400771268 /* SwiftSoup.framework */,
 				EA8D867120D0D45500771268 /* Differentiator.framework */,
 				EA8D867220D0D45600771268 /* RxDataSources.framework */,
 				EADFA5D720CDD0B800FDFE1C /* SnapKit.framework */,
@@ -403,6 +410,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftSoup.framework",
 			);
 			outputPaths = (
 			);
@@ -440,6 +448,7 @@
 				EA8D866620D0C4D300771268 /* TabBarCoordinator.swift in Sources */,
 				EADFA5F820CDEF8700FDFE1C /* DatePickerCoordinator.swift in Sources */,
 				EADFA5A720CDCBE100FDFE1C /* AppDelegate.swift in Sources */,
+				EA8D867C20D0E73F00771268 /* WorkoutNetworker.swift in Sources */,
 				EADFA60520CF9DAD00FDFE1C /* LocationPIckerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
