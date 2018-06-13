@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA8D866620D0C4D300771268 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D866520D0C4D300771268 /* TabBarCoordinator.swift */; };
+		EA8D866920D0C69000771268 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D866820D0C69000771268 /* TabBarViewController.swift */; };
 		EADFA5A720CDCBE100FDFE1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA5A620CDCBE100FDFE1C /* AppDelegate.swift */; };
 		EADFA5AE20CDCBE300FDFE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EADFA5AD20CDCBE300FDFE1C /* Assets.xcassets */; };
 		EADFA5B120CDCBE300FDFE1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADFA5AF20CDCBE300FDFE1C /* LaunchScreen.storyboard */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA8D866520D0C4D300771268 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		EA8D866820D0C69000771268 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		EADFA5A320CDCBE100FDFE1C /* Alchemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alchemy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EADFA5A620CDCBE100FDFE1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EADFA5AD20CDCBE300FDFE1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +113,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA8D866720D0C66900771268 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EA8D866520D0C4D300771268 /* TabBarCoordinator.swift */,
+				EA8D866820D0C69000771268 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		EADFA59A20CDCBE100FDFE1C = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +203,7 @@
 		EADFA5E020CDD41800FDFE1C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EA8D866720D0C66900771268 /* TabBar */,
 				EADFA60120CF9D5900FDFE1C /* LocationPicker */,
 				EADFA5F620CDEEB800FDFE1C /* DatePicker */,
 				EADFA5E120CDD42C00FDFE1C /* Schedule */,
@@ -383,7 +397,9 @@
 				EADFA60720CFA63000FDFE1C /* LocationPickerViewModel.swift in Sources */,
 				EADFA5DD20CDD35100FDFE1C /* Coordinating.swift in Sources */,
 				EADFA5EA20CDD6F300FDFE1C /* Event.swift in Sources */,
+				EA8D866920D0C69000771268 /* TabBarViewController.swift in Sources */,
 				EADFA5F320CDDD1900FDFE1C /* EventTableViewCell.swift in Sources */,
+				EA8D866620D0C4D300771268 /* TabBarCoordinator.swift in Sources */,
 				EADFA5F820CDEF8700FDFE1C /* DatePickerCoordinator.swift in Sources */,
 				EADFA5A720CDCBE100FDFE1C /* AppDelegate.swift in Sources */,
 				EADFA60520CF9DAD00FDFE1C /* LocationPIckerViewController.swift in Sources */,

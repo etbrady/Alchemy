@@ -15,11 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let navigationController = UINavigationController()
-        let scheduleCoordinator = ScheduleCoordinator(root: navigationController)
-        scheduleCoordinator.start()
+        let tabBarCoordinator = TabBarCoordinator(root: navigationController)
+        tabBarCoordinator.start()
+        //let scheduleCoordinator = ScheduleCoordinator(root: navigationController)
+        //scheduleCoordinator.start()
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = scheduleCoordinator.root
+        window?.rootViewController = tabBarCoordinator.viewController
         window?.makeKeyAndVisible()
         
         return true
