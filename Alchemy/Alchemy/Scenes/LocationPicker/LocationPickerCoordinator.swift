@@ -1,7 +1,6 @@
 import Foundation
 import UIKit
 import RxSwift
-import RxDataSources
 import Presentr
 
 class LocationPickerCoordinator: NSObject, PresentrCoordinating {

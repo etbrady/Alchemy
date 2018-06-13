@@ -2,7 +2,6 @@ import Foundation
 import UIKit
 import SnapKit
 import RxSwift
-import RxDataSources
 import RxCocoa
 import Presentr
 
@@ -10,17 +9,6 @@ class LocationPickerViewController: UIViewController {
     
     var viewModel: LocationPickerViewModel? = nil
     let disposeBag = DisposeBag()
-    
-    private let locationPickerAdapter = RxPickerViewStringAdapter<[Location?]>(
-        components: [],
-        numberOfComponents: { _,_,_  in 1 },
-        numberOfRowsInComponent: { (_, _, items, _) -> Int in
-            return items.count
-        },
-        titleForRow: { (_, _, items, row, _) -> String? in
-            return items[row]?.rawValue ?? "All Locations"
-        }
-    )
     
     let stackView: UIStackView = {
         let stackView = UIStackView()
