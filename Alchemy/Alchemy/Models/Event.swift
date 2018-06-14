@@ -19,20 +19,7 @@ class Event: Mappable {
             guard let locationId = value else {
                 return nil
             }
-            switch locationId {
-            case 10514:
-                return Location.northLoop
-            case 18997:
-                return Location.northeast
-            case 27577:
-                return Location.edina
-            case 28880:
-                return Location.highlandPark
-            case 30510:
-                return Location.loHi
-            default:
-                return nil
-            }
+            return Location.init(withId: locationId)
         }, toJSON: { _ in
             return nil
         })
@@ -50,5 +37,4 @@ class Event: Mappable {
         
         return dateFormatter.date(from: string)
     }
-    
 }

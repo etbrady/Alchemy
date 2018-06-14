@@ -181,10 +181,10 @@
 		EADFA5A520CDCBE100FDFE1C /* Alchemy */ = {
 			isa = PBXGroup;
 			children = (
+				EADFA5DA20CDD31D00FDFE1C /* Base */,
 				EADFA5EF20CDDC8000FDFE1C /* Extensions */,
 				EADFA5E820CDD6E800FDFE1C /* Models */,
 				EADFA5E020CDD41800FDFE1C /* Scenes */,
-				EADFA5DA20CDD31D00FDFE1C /* Base */,
 				EADFA5A620CDCBE100FDFE1C /* AppDelegate.swift */,
 				EADFA5AD20CDCBE300FDFE1C /* Assets.xcassets */,
 				EADFA5AF20CDCBE300FDFE1C /* LaunchScreen.storyboard */,
