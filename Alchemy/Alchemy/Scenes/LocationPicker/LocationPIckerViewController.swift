@@ -98,7 +98,6 @@ class LocationPickerViewController: UIViewController {
     }
     
     private func setupBindings() {
-        
         viewModel?.availableLocations
             .bind(to: locationPicker.rx.itemTitles) { _, item in
                 return item?.rawValue ?? "All Locations"

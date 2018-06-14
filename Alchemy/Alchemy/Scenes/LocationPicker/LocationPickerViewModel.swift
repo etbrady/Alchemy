@@ -3,10 +3,11 @@ import RxSwift
 
 struct LocationPickerViewModel {
     
-    let availableLocations = Observable<[Location?]>.just([nil] + Location.all)
-    let selectedLocation = Variable<Location?>(nil)
+    let availableLocations: Observable<[Location?]>
+    let selectedLocation: Variable<Location?>
     
     init() {
-        //ava
+        availableLocations =  Observable<[Location?]>.just([nil] + Location.all)
+        selectedLocation = Variable<Location?>(nil)
     }
 }

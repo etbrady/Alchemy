@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Alchemy
-//
-//  Created by Ethan Brady on 6/10/18.
-//  Copyright © 2018 Ethan Brady. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -17,8 +9,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController()
         let tabBarCoordinator = TabBarCoordinator(root: navigationController)
         tabBarCoordinator.start()
-        //let scheduleCoordinator = ScheduleCoordinator(root: navigationController)
-        //scheduleCoordinator.start()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBarCoordinator.viewController

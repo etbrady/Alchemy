@@ -22,14 +22,12 @@ class ScheduleCoordinator: NSObject, NavigationCoordinating {
     }
     
     func createViewController() -> ScheduleViewController {
-        let viewController = ScheduleViewController()
-        let viewModel = ScheduleViewModel(date: dateSubject.asObservable(), location: locationSubject.asObservable())
-        
-        viewController.viewModel = viewModel
-        return viewController
+        return ScheduleViewController()
     }
     
     func configure(_ viewController: ScheduleViewController) {
+        viewController.viewModel = ScheduleViewModel(date: dateSubject.asObservable(), location: locationSubject.asObservable())
+        
         viewController.locationBarButtonItem.rx.tap.subscribe({ _ in
             self.locationPickerCoordinator.start()
         }).disposed(by: disposeBag)

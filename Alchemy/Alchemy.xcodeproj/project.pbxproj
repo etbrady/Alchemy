@@ -244,11 +244,11 @@
 		EADFA5E020CDD41800FDFE1C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				EA8D866A20D0CBD400771268 /* Workout */,
-				EA8D866720D0C66900771268 /* TabBar */,
-				EADFA60120CF9D5900FDFE1C /* LocationPicker */,
 				EADFA5F620CDEEB800FDFE1C /* DatePicker */,
+				EADFA60120CF9D5900FDFE1C /* LocationPicker */,
 				EADFA5E120CDD42C00FDFE1C /* Schedule */,
+				EA8D866720D0C66900771268 /* TabBar */,
+				EA8D866A20D0CBD400771268 /* Workout */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -256,11 +256,11 @@
 		EADFA5E120CDD42C00FDFE1C /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				EADFA5E220CDD43B00FDFE1C /* ScheduleViewController.swift */,
-				EADFA5E420CDD44400FDFE1C /* ScheduleCoordinator.swift */,
-				EADFA5E620CDD46100FDFE1C /* ScheduleViewModel.swift */,
-				EADFA5ED20CDD81F00FDFE1C /* ScheduleNetworker.swift */,
 				EADFA5F220CDDD1900FDFE1C /* EventTableViewCell.swift */,
+				EADFA5E420CDD44400FDFE1C /* ScheduleCoordinator.swift */,
+				EADFA5ED20CDD81F00FDFE1C /* ScheduleNetworker.swift */,
+				EADFA5E220CDD43B00FDFE1C /* ScheduleViewController.swift */,
+				EADFA5E620CDD46100FDFE1C /* ScheduleViewModel.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";

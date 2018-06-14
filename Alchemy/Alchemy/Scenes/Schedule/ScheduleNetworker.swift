@@ -44,11 +44,11 @@ struct ScheduleNetworker {
     }
     
     func getEventsRequestParameters(from date: Date) -> Parameters {
-        let dates = getStartAndEndDateStringsFrom(date)
+        let (startDate, endDate) = getStartAndEndDateStringsFrom(date)
         let parameters = [
             "client_id": clientId,
-            "from": dates.0,
-            "to": dates.1
+            "from": startDate,
+            "to": endDate
         ]
         
         return parameters

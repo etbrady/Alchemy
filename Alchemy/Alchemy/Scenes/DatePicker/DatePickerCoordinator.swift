@@ -30,13 +30,13 @@ class DatePickerCoordinator: NSObject, PresentrCoordinating {
     }
     
     func createViewController() -> DatePickerViewController {
-        let viewController = DatePickerViewController()
-                
-        return viewController
+        return DatePickerViewController()
     }
     
     func configure(_ viewController: DatePickerViewController) {
-        viewController.datePicker.date = try! dateSubject.value()
+        if let date = try? dateSubject.value() {
+            viewController.datePicker.date = date
+        }
 
         viewController.doneButton.rx.tap.subscribe({ _ in
             self.dateSubject.onNext(viewController.datePicker.date)
