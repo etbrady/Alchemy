@@ -19,6 +19,7 @@
 		EA8D867C20D0E73F00771268 /* WorkoutNetworker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D867B20D0E73F00771268 /* WorkoutNetworker.swift */; };
 		EA8D867E20D0EF2500771268 /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8D867D20D0EF2400771268 /* SwiftSoup.framework */; };
 		EA8D868220D200B000771268 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D868120D200B000771268 /* Location.swift */; };
+		EA8D868420D2035400771268 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D868320D2035400771268 /* NetworkingError.swift */; };
 		EADFA5A720CDCBE100FDFE1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADFA5A620CDCBE100FDFE1C /* AppDelegate.swift */; };
 		EADFA5AE20CDCBE300FDFE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EADFA5AD20CDCBE300FDFE1C /* Assets.xcassets */; };
 		EADFA5B120CDCBE300FDFE1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADFA5AF20CDCBE300FDFE1C /* LaunchScreen.storyboard */; };
@@ -72,6 +73,7 @@
 		EA8D867B20D0E73F00771268 /* WorkoutNetworker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutNetworker.swift; sourceTree = "<group>"; };
 		EA8D867D20D0EF2400771268 /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/iOS/SwiftSoup.framework; sourceTree = "<group>"; };
 		EA8D868120D200B000771268 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		EA8D868320D2035400771268 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		EADFA5A320CDCBE100FDFE1C /* Alchemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alchemy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EADFA5A620CDCBE100FDFE1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EADFA5AD20CDCBE300FDFE1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,11 +150,11 @@
 		EA8D866A20D0CBD400771268 /* Workout */ = {
 			isa = PBXGroup;
 			children = (
-				EA8D866B20D0CBF200771268 /* WorkoutViewModel.swift */,
-				EA8D866F20D0CEE000771268 /* WorkoutViewController.swift */,
-				EA8D867520D0DC9A00771268 /* WorkoutCoordinator.swift */,
 				EA8D867920D0DE3600771268 /* ExerciseTableViewCell.swift */,
+				EA8D867520D0DC9A00771268 /* WorkoutCoordinator.swift */,
 				EA8D867B20D0E73F00771268 /* WorkoutNetworker.swift */,
+				EA8D866F20D0CEE000771268 /* WorkoutViewController.swift */,
+				EA8D866B20D0CBF200771268 /* WorkoutViewModel.swift */,
 			);
 			path = Workout;
 			sourceTree = "<group>";
@@ -224,6 +226,7 @@
 			children = (
 				EADFA5DB20CDD33900FDFE1C /* Coordinating */,
 				EADFA5F420CDDD4400FDFE1C /* Configurable.swift */,
+				EA8D868320D2035400771268 /* NetworkingError.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -266,8 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				EADFA5E920CDD6F300FDFE1C /* Event.swift */,
-				EA8D866D20D0CCAB00771268 /* Workout.swift */,
 				EA8D868120D200B000771268 /* Location.swift */,
+				EA8D866D20D0CCAB00771268 /* Workout.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EADFA5EE20CDD81F00FDFE1C /* ScheduleNetworker.swift in Sources */,
+				EA8D868420D2035400771268 /* NetworkingError.swift in Sources */,
 				EADFA5FA20CDEFAD00FDFE1C /* DatePickerViewController.swift in Sources */,
 				EA8D867020D0CEE000771268 /* WorkoutViewController.swift in Sources */,
 				EA8D866E20D0CCAB00771268 /* Workout.swift in Sources */,

@@ -5,11 +5,6 @@ import RxAlamofire
 import Alamofire
 import ObjectMapper
 
-enum CommonError : Error {
-    case parsingError
-    case networkError
-}
-
 struct ScheduleNetworker {
     
     let baseUrl = "https://alchemy365.frontdeskhq.com/api/v2/"
@@ -31,21 +26,21 @@ struct ScheduleNetworker {
                 if response.statusCode == 200 {
                     guard let json = json as? [String : [[String: Any]]]
                         , let eventsJson = json["event_occurrences"] else {
-                            return .failure(CommonError.parsingError)
+                            return .failure(NetworkingError.parsingError)
                     }
                     
                     let events = Mapper<Event>().mapArray(JSONArray: eventsJson)
                     return .success(events)
 
                 } else {
-                    return .failure(CommonError.networkError)
+                    return .failure(NetworkingError.networkError)
                 }
             }
             .observeOn(MainScheduler.instance)
             .do(onNext: { _ in
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             })
-            .asDriver(onErrorJustReturn: Result<[Event]>.failure(CommonError.parsingError))
+            .asDriver(onErrorJustReturn: Result<[Event]>.failure(NetworkingError.parsingError))
     }
     
     func getEventsRequestParameters(from date: Date) -> Parameters {

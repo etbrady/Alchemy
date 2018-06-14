@@ -6,7 +6,6 @@ import RxCocoa
 import Presentr
 import RxDataSources
 
-
 struct WorkoutSection {
     var header: String
     var items: [Item]
@@ -63,7 +62,6 @@ class WorkoutViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.alchemyBlue
         
         navigationItem.rightBarButtonItem = dateBarButtonItem
-
         
         view.addSubview(tableView)
         tableView.snp.makeConstraints({ make in
@@ -73,27 +71,20 @@ class WorkoutViewController: UIViewController {
     }
     
     private func setupBindings() {
-        /*
-        viewModel?
-            .filteredEvents
-            .bind(to: tableView.rx.items(cellIdentifier: EventTableViewCell.reuseIdentifier, cellType: EventTableViewCell.self)) { index, scent, cell in
-                cell.configure(with: scent)
-            }.disposed(by: disposeBag)
-         
-         
- */
         tableView.rx
             .setDelegate(self)
             .disposed(by: disposeBag)
         
         let dataSource = RxTableViewSectionedReloadDataSource<WorkoutSection>(
             configureCell: { (dataSource, table, indexPath, item) in
-                let cell = table.dequeueReusableCell(withIdentifier: ExerciseTableViewCell.reuseIdentifier, for: indexPath) as! ExerciseTableViewCell
+                guard let cell = table.dequeueReusableCell(withIdentifier: ExerciseTableViewCell.reuseIdentifier, for: indexPath) as? ExerciseTableViewCell else {
+                    return UITableViewCell()
+                }
                 cell.configure(with: item)
                 return cell
             },
-            titleForHeaderInSection: { (ds, section) -> String? in
-                return ds[section].header
+            titleForHeaderInSection: { (dataSource, section) -> String? in
+                return dataSource[section].header
             }
         )
         
@@ -107,7 +98,6 @@ class WorkoutViewController: UIViewController {
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
         
-        
         viewModel?
             .date
             .map { date -> String in
@@ -119,7 +109,6 @@ class WorkoutViewController: UIViewController {
             .bind(to: dateBarButtonItem.rx.title)
             .disposed(by: disposeBag)
     }
-    
 }
 
 extension WorkoutViewController: UITableViewDelegate {

@@ -28,14 +28,14 @@ struct WorkoutNetworker {
                     return .success(workouts)
                     
                 } else {
-                    return .failure(CommonError.networkError)
+                    return .failure(NetworkingError.networkError)
                 }
             }
             .observeOn(MainScheduler.instance)
             .do(onNext: { _ in
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             })
-            .asDriver(onErrorJustReturn: Result<[Workout]>.failure(CommonError.parsingError))
+            .asDriver(onErrorJustReturn: Result<[Workout]>.failure(NetworkingError.parsingError))
     }
     
     private func parseWorkouts(from htmlString: String) -> [Workout] {

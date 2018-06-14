@@ -18,14 +18,12 @@ class WorkoutCoordinator: NSObject, NavigationCoordinating {
     }
     
     func createViewController() -> WorkoutViewController {
-        let viewController = WorkoutViewController()
-        let viewModel = WorkoutViewModel(date: dateSubject.asObservable())
-        
-        viewController.viewModel = viewModel
-        return viewController
+        return WorkoutViewController()        
     }
     
     func configure(_ viewController: WorkoutViewController) {
+        viewController.viewModel = WorkoutViewModel(date: dateSubject.asObservable())
+        
         viewController.dateBarButtonItem.rx.tap.subscribe({ _ in
             self.datePickerCoordinator.start()
         }).disposed(by: disposeBag)

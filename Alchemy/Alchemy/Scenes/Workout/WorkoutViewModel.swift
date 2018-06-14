@@ -8,12 +8,8 @@ struct WorkoutViewModel {
     let workoutNetworker = WorkoutNetworker()
     
     init(date: Observable<Date>) {
-        let testWorkouts = [
-            Workout(className: "A10", exercises: ["Push Ups", "Sit Ups"]),
-            Workout(className: "AStrong", exercises: ["Bench Press", "Squats"])
-        ]
-       // workouts = Observable<[Workout]>.just(testWorkouts)
-        
+        self.date = date
+
         workouts = workoutNetworker
             .fetchWorkouts(for: date)
             .map { result -> [Workout] in
@@ -26,7 +22,5 @@ struct WorkoutViewModel {
                 }
             }
             .asObservable()
-        
-        self.date = date
     }
 }
