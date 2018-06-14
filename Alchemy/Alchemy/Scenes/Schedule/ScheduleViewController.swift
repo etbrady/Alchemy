@@ -16,6 +16,7 @@ class ScheduleViewController: UIViewController {
         tableView.estimatedRowHeight = 150
         tableView.tableFooterView = UIView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.allowsSelection = false
         
         tableView.register(EventTableViewCell.self, forCellReuseIdentifier: EventTableViewCell.reuseIdentifier)
         

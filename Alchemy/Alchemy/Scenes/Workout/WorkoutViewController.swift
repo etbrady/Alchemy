@@ -36,6 +36,7 @@ class WorkoutViewController: UIViewController {
         tableView.estimatedRowHeight = 150
         tableView.tableFooterView = UIView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.allowsSelection = false
         
         tableView.register(ExerciseTableViewCell.self, forCellReuseIdentifier: ExerciseTableViewCell.reuseIdentifier)
         
