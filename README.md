@@ -14,7 +14,7 @@ This is an iOS app for displaying the daily schedule and workouts at [Alchemy](h
 
 ## Purpose
 
-Alchemy is a gym that combines yoga, strength, and conditioning training in a variety of class formats. Their website displays the daily schedule and workouts, but it's slow and cumberson. I decided to make an app to quickly get the information I want daily.
+Alchemy is a gym that combines yoga, strength, and conditioning training in a variety of class formats. Their website displays the daily schedule and workouts, but it's slow and cumbersome. I decided to make an app to quickly get the information I want daily.
 
 ## UX
 When the user opens the app, the schedule for the current day will load and display. The user can then use the modals that appear by pressing buttons in the navigation bar to change date or to filter the displayed events by location.
@@ -25,7 +25,7 @@ The user can tab over to the workout page to view the workouts of the current da
 
 Alchemy does not have a public API. Therefore, I used browser dev tools to inspect the network requests that were being made on the relevant pages, and then I mimicked those requests. 
 
-The schedule network request goes to an internal API that returns data in a standard JSON format. Locations came back as IDs without any name associated with them, and I'm not aware of an API endpoint that I could use to retrieve that information, so I hardcoded a mapping between the IDs and  location names. There are only a few locations, so this should'nt cause much of an issue.
+The schedule network request goes to an internal API that returns data in a standard JSON format. Locations come back as IDs without any name associated with them, and I'm not aware of an API endpoint that I can use to retrieve that information, so I hardcoded a mapping between the IDs and  location names. There are only a few locations, so this shouldn't cause too large of scalability issues.
 
 Retrieving workout infromation was more difficult. The main web content is served statically, so I had to scrape HTML. The HTML documents aren't cleanly organized; I'm guessing they were created in a visual editor of some kind. Below is an example of a subsection of HTML that the app would need to parse:
 
@@ -68,3 +68,10 @@ I made heavy use of [RxSwift](https://github.com/ReactiveX/RxSwift) to help make
 
 Other than the launch screen, this app doesn't contain any Storyboard or XIB files. I decided to use [SnapKit](https://github.com/SnapKit/SnapKit), an AutoLayout DSL for Swift, to declare my views instead. This was my first time taking this approach, and I ended up really liking how readable the view declarations are and how I didn't have to deal with the slowness of an interface builder. If I were working with any team members, writing view layouts in code would also help make merge conflicts more maneagable. 
 
+## What's Next
+
+Unit tests are the big thing missing from this app. It feels wrong not having them yet, but I've needed to prioritize speed of development up to this point, and the app isn't published yet. I'll use [Quick](https://github.com/Quick/Quick) and [Nimble](https://github.com/Quick/Nimble) for behavior-driven unit tests. 
+
+There are a few UI enhancements I'd like to make. The first is adding a loading view other than the ActivityIndicator. I'll either overlay a loading view over the scene or use this [SkeletonView](https://github.com/Juanpe/SkeletonView) to show loading progress directly where the content will appear in each UITableViewCell. I'd also like to add a view that appears if data fails to load. Right now, just a blank screen appears.
+
+I'd like to add functionality for adding events to the user's calendar when clicking on them.
