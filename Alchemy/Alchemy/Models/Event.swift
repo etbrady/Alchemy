@@ -1,14 +1,6 @@
 import Foundation
 import ObjectMapper
 
-enum Location: String {
-    case alchemyNorthLoop = "Alchemy North Loop"
-    case alchemyNortheast = "Alchemy Northeast"
-    case alchemyEdina = "Alchemy Edina"
-    
-    static let all = [alchemyNorthLoop, alchemyNortheast, alchemyEdina]
-}
-
 class Event: Mappable {
     
     var name: String?
@@ -17,9 +9,7 @@ class Event: Mappable {
     var location: Location?
     var instructor: String?
     
-    required init?(map: Map) {
-        
-    }
+    required init?(map: Map) {}
     
     public func mapping(map: Map) {
         let dateFormatter = DateFormatter()
@@ -31,11 +21,15 @@ class Event: Mappable {
             }
             switch locationId {
             case 10514:
-                return Location.alchemyNorthLoop
+                return Location.northLoop
             case 18997:
-                return Location.alchemyNortheast
+                return Location.northeast
             case 27577:
-                return Location.alchemyEdina
+                return Location.edina
+            case 28880:
+                return Location.highlandPark
+            case 30510:
+                return Location.loHi
             default:
                 return nil
             }
